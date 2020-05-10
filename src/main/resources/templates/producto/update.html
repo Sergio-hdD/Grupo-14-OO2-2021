@@ -1,0 +1,16 @@
+<form action="#" th:action="@{/productos/update}"
+	th:object="${producto}" method="post">
+	<input type="hidden" th:field="*{idProducto}" />
+	</p>
+	<p> Nombre: <input type="text" th:field="*{nombre}" /> </p>
+	<p> Descripcion: <input type="text" th:field="*{descripcion}" /> </p>
+	<p> Precio: <input type="text" th:field="*{precio}" /> </p>
+	<input type="hidden" th:field="*{fechaAlta}" /> <input type="submit"
+		value="Edit" />
+</form>
+
+<form action="#"
+	th:action="@{/productos/delete/{id}(id=${producto.idProducto})}"
+	method="post">
+	<input type="submit" value="Delete Product" />
+</form>

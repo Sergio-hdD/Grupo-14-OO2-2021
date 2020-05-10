@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Producto</title>
+</head>
+<body>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Descripcion</th>
+				<th>Precio</th>
+				<th>Fecha Alta</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			<tr th:each="producto : ${productos}">
+				<td><span th:text="${producto.nombre}" /></td>
+				<td><span th:text="${producto.descripcion}" /></td>
+				<td><span th:text="${producto.precio}" /></td>
+				<td><span th:text="${producto.fechaAlta}" /></td>
+				<td><a th:href="@{/productos/{id}(id=${producto.idProducto})}">Ver</a></td>
+	
+			</tr>
+		</tbody>
+	</table>
+
+	<a th:href="@{/productos/new}">agregar</a>
+
+</body>
+
+</html>
+
