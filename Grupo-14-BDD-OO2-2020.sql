@@ -1,0 +1,3 @@
+drop database if exists `Grupo-14-BDD-OO2-2020`;
+CREATE DATABASE IF NOT EXISTS `Grupo-14-BDD-OO2-2020` DEFAULT CHARACTER SET latin1;
+USE `Grupo-14-BDD-OO2-2020` ;
